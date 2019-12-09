@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node src/server.js --exec",
-    "pprod": "cross-env NODE_ENV=pprod node -r esm src/server",
+    "clean": "rimraf ./dist/*",
+    "build": "yarn clean && rollup -c",
+    "start": "node dist/bundle.js",
     "dev": "nodemon src/server.js --exec babel-node",
     "lint:eslint": "./node_modules/.bin/eslint \"./src/**/*.js\" --fix",
     "test": "jest --runInBand --coverage --forceExit"
@@ -32,6 +33,13 @@
     "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.9.0",
     "nodemon": "^1.19.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.2",
+    "rollup": "^1.9.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^3.3.0"
   }
 }
