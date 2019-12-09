@@ -1,6 +1,6 @@
 import { createTestClient } from 'apollo-server-testing';
-import { ApolloServer } from 'apollo-server';
-import schemas from '../../src/features';
+import { ApolloServer } from 'apollo-server-express';
+import schemas from '../../src/domain';
 
 beforeAll(done => {
     const server = new ApolloServer({
