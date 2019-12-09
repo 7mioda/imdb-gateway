@@ -8,8 +8,8 @@ import schema from './domain';
 
 
 
-const { PORT } = process.env;
-const port = PORT || 7000;
+const { PORT: port } = process.env;
+
 const apolloServer = new ApolloServer( schema );
 const app = Express();
 apolloServer.applyMiddleware({ app });
