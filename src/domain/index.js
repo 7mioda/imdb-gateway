@@ -2,8 +2,9 @@ import { gql } from 'apollo-server-express';
 import {merge} from 'lodash';
 import movies from './movies';
 import shows from './shows';
+import genres from './genres';
 
-const domains = [movies, shows];
+const domains = [movies, shows, genres];
 
 const root = gql`
     scalar Date

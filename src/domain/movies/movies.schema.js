@@ -8,7 +8,7 @@ export default gql`
         adult: Boolean
         backdrop_path: String
         poster_path: String
-        genre_ids: [Int]
+        genres: [Genre]
         original_language: String
         original_title: String
         overview: String
