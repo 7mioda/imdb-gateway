@@ -3,8 +3,9 @@ import {merge} from 'lodash';
 import movies from './movies';
 import shows from './shows';
 import genres from './genres';
+import peoples from './peoples';
 
-const domains = [movies, shows, genres];
+const domains = [movies, shows, genres, peoples];
 
 const root = gql`
     scalar Date
